@@ -1,10 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const GRADES = [
-  "Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6",
-  "Class 7", "Class 8", "Class 9", "Class 10", "Class 11", "Class 12",
-];
+const GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 function App() {
   const [name, setName] = useState("");
@@ -82,7 +79,7 @@ function App() {
                 <option value="">Select grade</option>
                 {GRADES.map((g) => (
                   <option key={g} value={g}>
-                    {g}
+                    Class {g}
                   </option>
                 ))}
               </select>
@@ -117,7 +114,7 @@ function App() {
                   <tr key={student.id}>
                     <td>{student.name}</td>
                     <td>{student.age}</td>
-                    <td>{student.grade}</td>
+                    <td>Class {student.grade}</td>
                     <td>
                       <button
                         type="button"
